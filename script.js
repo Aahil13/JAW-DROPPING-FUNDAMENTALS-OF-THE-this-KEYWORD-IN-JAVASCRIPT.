@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // code sample 1: calling a method
 const sample1 = {
@@ -11,3 +11,10 @@ const sample1 = {
 };
 
 sample1.calcAge();
+
+// code sample 2: A normal function call
+const sample2 = function () {
+  console.log(this);
+};
+
+sample2();
