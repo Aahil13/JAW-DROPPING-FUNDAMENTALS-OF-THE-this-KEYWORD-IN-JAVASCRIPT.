@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // code sample 1: calling a method
 const sample1 = {
@@ -18,3 +18,29 @@ const sample2 = function () {
 };
 
 sample2();
+
+///code sample 3: As an event
+const buttonEl = document.querySelector(".btn");
+const handleClick = function () {
+  console.log(this);
+};
+buttonEl.addEventListener("click", handleClick);
+
+//code sample 4: arrow functions
+const sample4_1 = () => console.log(this);
+
+sample4_1()
+
+
+const sample4_2 = function () {
+  const sample4_2ArrowFunction = () => {
+    console.log(this);
+  };
+
+  sample4_2ArrowFunction()
+};
+
+sample4_2();
+
+
+console.log(this);
