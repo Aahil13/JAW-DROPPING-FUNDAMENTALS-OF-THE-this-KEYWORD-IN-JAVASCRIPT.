@@ -76,3 +76,19 @@ const sample6Obj1 = {
 const parameters = ["aahil", 14];
 
 sample6.call(sample6Obj1, ...parameters);
+
+// sample7: bind();
+function sample7(name, age) {
+  console.log(this);
+  console.log(
+    `${name} is ${age} years old and the name of this object is ${this.objectName}`
+  );
+}
+
+const sample7Obj1 = {
+  objectName: "object1",
+};
+
+const sample7Bind = sample7.bind(sample7Obj1);
+
+sample7Bind("aahil", 24);
