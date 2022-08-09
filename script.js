@@ -26,56 +26,56 @@ const handleClick = function () {
 };
 buttonEl.addEventListener("click", handleClick);
 
-//code sample 4: arrow functions
-const sample4_1 = () => console.log(this);
+//code sample 3: arrow functions
+const sample3a = () => console.log(this);
 
-sample4_1();
+sample3a();
 
-const sample4_2 = function () {
-  const sample4_2ArrowFunction = () => {
+const sample3b = function () {
+  const sample3bArrowFunction = () => {
     console.log(this);
   };
 
-  sample4_2ArrowFunction();
+  sample3bArrowFunction();
 };
 
-sample4_2();
+sample3b();
 
 console.log(this);
 
-// sample 5: call() method
-function sample5() {
+// sample 4: call() method
+function sample4() {
   console.log(`${this.name} is ${this.age} years old`);
 }
 
-const sample5Obj1 = {
+const sample4Obj1 = {
   name: "Prince",
   age: 24,
 };
 
-const sample5Obj2 = {
+const sample4Obj2 = {
   name: "Aahil",
   age: 45,
 };
 
-sample5.call(sample5Obj1);
-sample5.call(sample5Obj2);
+sample5.call(sample4Obj1);
+sample5.call(sample4Obj2);
 
 //sample 6: apply() method
-function sample6(name, age) {
+function sample5(name, age) {
   console.log(this);
   console.log(
     `${name} is ${age} years old and the name of this object is ${this.objectName}`
   );
 }
 
-const sample6Obj1 = {
+const sample5Obj = {
   objectName: "object1",
 };
 
 const parameters = ["aahil", 14];
 
-sample6.call(sample6Obj1, ...parameters);
+sample5.call(sample5Obj, ...parameters);
 
 // sample7: bind();
 function sample7(name, age) {
@@ -85,10 +85,10 @@ function sample7(name, age) {
   );
 }
 
-const sample7Obj1 = {
+const sample7Obj = {
   objectName: "object1",
 };
 
-const sample7Bind = sample7.bind(sample7Obj1);
+const sample7Bind = sample7.bind(sample7Obj);
 
 sample7Bind("aahil", 24);
